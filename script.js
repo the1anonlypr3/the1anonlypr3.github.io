@@ -1,3 +1,5 @@
+// this is all AI, i hate JS
+
 const navToggle = document.querySelector('.nav-toggle');
 const siteNav = document.getElementById('site-nav');
 const yearEl = document.getElementById('year');
