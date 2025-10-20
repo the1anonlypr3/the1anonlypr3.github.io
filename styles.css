@@ -1,0 +1,110 @@
+/* CSS Reset */
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0}
+img,svg{max-width:100%;display:block}
+
+:root{
+  --bg:#0b0d10;
+  --card:#11151a;
+  --text:#e6e7eb;
+  --muted:#a6adbb;
+  --accent:#69e1ff;
+  --accent-2:#a78bfa;
+  --border:#222830;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+body{
+  font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  background:radial-gradient(1200px 600px at 10% -10%,rgba(105,225,255,.15),transparent 50%),
+             radial-gradient(800px 400px at 110% 10%,rgba(167,139,250,.12),transparent 50%),
+             var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.site-header{
+  position:sticky;top:0;z-index:10;background:rgba(11,13,16,.7);backdrop-filter:blur(8px);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 20px;border-bottom:1px solid var(--border)
+}
+.logo{font-weight:700;color:var(--text)}
+.header-right{display:flex;align-items:center;gap:12px}
+.site-nav{display:flex;gap:12px}
+.site-nav a{color:var(--text);opacity:.9;font-size:14px}
+.header-social{display:flex;gap:8px;list-style:none;padding:0;margin:0}
+.header-social img{width:24px;height:24px;object-fit:cover;opacity:.9}
+.header-social a:hover img{opacity:1;filter:drop-shadow(0 0 6px rgba(105,225,255,.3))}
+
+.nav-toggle{display:none;background:none;border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:8px}
+.theme-toggle{background:none;border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:8px}
+
+.hero{padding:72px 20px 28px}
+.hero-inner{max-width:960px;margin:0 auto;text-align:center}
+.hero h1{font-size:clamp(28px,4vw,44px);line-height:1.2;margin:0 0 10px}
+.accent{background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);max-width:720px;margin:0 auto 18px}
+
+.button{display:inline-block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;color:var(--text);background:transparent}
+.button.primary{background:linear-gradient(90deg,rgba(105,225,255,.15),rgba(167,139,250,.15));border-color:transparent}
+.button.small{padding:8px 10px;font-size:14px}
+
+.section{padding:28px 20px}
+.section h2{max-width:1100px;margin:0 auto 12px;font-size:34px}
+.facts{max-width:960px;margin:0 auto;color:var(--muted)}
+.facts li{margin-bottom:6px}
+
+.grid{max-width:1100px;margin:0 auto;display:grid;gap:16px}
+.projects-grid{grid-template-columns:repeat(auto-fill,minmax(260px,1fr));grid-auto-rows:1fr}
+.projects-grid > *{height:100%}
+.projects-grid > h1{display:flex;align-items:center;justify-content:center;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;margin:0;color:var(--text);font-size:24px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 6px}
+.card p{color:var(--muted);margin:0 0 10px}
+
+.timeline{max-width:960px;margin:0 auto;border-left:2px solid var(--border);padding-left:16px}
+.timeline .item{margin-bottom:14px}
+.item-heading{font-weight:600}
+.item-meta{color:var(--muted);font-size:14px;margin-bottom:6px}
+
+
+.site-footer{border-top:1px solid var(--border);padding:18px 20px;color:var(--muted);text-align:center}
+
+
+/* Contact icon list */
+.link_images{max-width:150px;margin:0 auto;display:flex;flex-direction:row;justify-content:center;align-items:center;gap:10px;list-style:none;padding:0;}
+.link_images img{width:40px;object-fit:cover;color:var(--text);opacity:.9;}
+.link_images a:hover img{opacity:1;filter:drop-shadow(0 0 6px rgba(105,225,255,.3))}
+
+@media (max-width:720px){
+  .header-right{flex-wrap:wrap;gap:8px}
+  .site-nav{position:fixed;inset:56px 12px auto 12px;background:var(--card);padding:12px;border:1px solid var(--border);border-radius:12px;display:none;flex-direction:column}
+  .site-nav.open{display:flex}
+  .nav-toggle{display:inline-block}
+  .header-social{order:-1}
+}
+
+/* Typing animation */
+.typing {
+  overflow: hidden;
+  border-right: 2px solid var(--accent);
+  white-space: nowrap;
+  animation: typing 2s steps(12, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--accent) }
+}
+
+
+
+
