@@ -23,6 +23,16 @@ body{
   line-height:1.6;
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--bg);border-radius:4px}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px;transition:background 0.2s ease}
+::-webkit-scrollbar-thumb:hover{background:var(--muted)}
+::-webkit-scrollbar-corner{background:var(--bg)}
+
+/* Firefox scrollbar */
+html{scrollbar-width:thin;scrollbar-color:var(--border) var(--bg)}
+
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 
