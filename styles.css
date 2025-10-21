@@ -23,6 +23,10 @@ body{
   line-height:1.6;
 }
 
+::selection{
+  background-color: #43259b;
+  color: var(--text);
+}
 /* Custom Scrollbar */
 ::-webkit-scrollbar{width:8px}
 ::-webkit-scrollbar-track{background:var(--bg);border-radius:4px}
